@@ -1,5 +1,6 @@
 // src/api.js - Backend API Calls
-const API_BASE_URL = 'http://localhost:5000/api';
+// src/api.js - Backend API Calls
+const API_BASE_URL = 'https://squats-challenge.onrender.com/api';
 
 export const api = {
   // Test Backend Verbindung
