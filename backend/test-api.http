@@ -1,0 +1,36 @@
+### Test Backend
+GET http://localhost:5000/api/test
+
+### Squats hinzufügen (POST Test)
+POST http://localhost:5000/api/squats
+Content-Type: application/json
+
+{
+  "user_name": "Christine",
+  "date": "2025-09-05",
+  "squats": 25
+}
+
+### Alle Squats abrufen
+GET http://localhost:5000/api/squats
+
+### Deine Squats abrufen
+GET http://localhost:5000/api/squats/Christine
+
+### User Registration testen - NEU!
+POST http://localhost:5000/api/register
+Content-Type: application/json
+
+{
+  "username": "Christine",
+  "password": "meinPasswort123"
+}
+
+### User Login testen - NEU!
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+  "username": "Christine", 
+  "password": "meinPasswort123"
+}GET http://localhost:5000/api/squats/Christine

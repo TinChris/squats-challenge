@@ -1,0 +1,155 @@
+/* Challenge.css - Komplettes Design mit CSS Custom Properties */
+
+:root {
+  /* Farb-System */
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --success-gradient: linear-gradient(45deg, #4CAF50, #45a049);
+  --progress-gradient: linear-gradient(90deg, #4CAF50, #8BC34A);
+  
+  --primary-color: #667eea;
+  --success-color: #4CAF50;
+  --success-hover: #45a049;
+  --text-dark: #333;
+  --text-light: white;
+  --border-color: #e0e0e0;
+  --background-light: #f5f5f5;
+  
+  /* Schatten */
+  --shadow-light: 0 4px 12px rgba(76, 175, 80, 0.3);
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.1);
+  --shadow-text: 2px 2px 4px rgba(0,0,0,0.3);
+  
+  /* Border Radius */
+  --border-radius: 8px;
+  --border-radius-large: 15px;
+  --border-radius-progress: 10px;
+  
+  /* Abstände */
+  --spacing-small: 10px;
+  --spacing-medium: 15px;
+  --spacing-large: 20px;
+  --spacing-xl: 25px;
+  --spacing-xxl: 30px;
+}
+
+/* Haupt-Container */
+.challenge-app {
+  background: var(--primary-gradient);
+  min-height: 100vh;
+  padding: var(--spacing-large);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Bereich */
+.challenge-header {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.challenge-title {
+  font-size: 2.5em;
+  margin-bottom: var(--spacing-small);
+  text-shadow: var(--shadow-text);
+}
+
+/* Karten Design */
+.challenge-card {
+  background: var(--text-light);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-large) auto;
+  max-width: 400px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.challenge-card h2 {
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-medium);
+  font-size: 1.5em;
+}
+
+/* Input Bereich */
+.input-group {
+  display: flex;
+  gap: var(--spacing-small);
+  margin: var(--spacing-medium) 0;
+}
+
+.squats-input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.squats-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Button Design */
+.add-button {
+  background: var(--success-gradient);
+  color: var(--text-light);
+  border: none;
+  padding: 12px var(--spacing-large);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
+
+.add-button:active {
+  transform: translateY(0);
+}
+
+/* Statistik Text */
+.stats-text {
+  font-size: 18px;
+  margin: var(--spacing-small) 0;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+/* Fortschrittsbalken */
+.progress-bar {
+  background: var(--border-color);
+  border-radius: var(--border-radius-progress);
+  height: 8px;
+  margin: var(--spacing-medium) 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--progress-gradient);
+  transition: width 0.3s ease;
+  border-radius: var(--border-radius-progress);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .challenge-app {
+    padding: var(--spacing-small);
+  }
+  
+  .challenge-title {
+    font-size: 2em;
+  }
+  
+  .challenge-card {
+    margin: var(--spacing-small) auto;
+    padding: var(--spacing-large);
+  }
+}
