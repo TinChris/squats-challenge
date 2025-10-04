@@ -13,8 +13,8 @@ const app = express();
 
 // Database Setup
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || 'postgresql://squats_challenge_user:SYQkWTzp5quT2859y4a2s3QsWTKjXi4Q@dpg-d2u319nfte5s73aoidpg-a.frankfurt-postgres.render.com/squats_challenge',
-  ssl: { rejectUnauthorized: false }  // Immer SSL verwenden für Render
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
 });
 
 // Test connection and create tables
